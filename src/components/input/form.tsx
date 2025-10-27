@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { useCityContext } from '../../context/city-context'
+import { useCityContext } from '../../context/contexts'
 import { CityProps } from '../../types'
 import { useUrlPosition } from '../../hooks/useUrlPosition'
 import { BASE_URL, convertToEmoji } from '../../utils'

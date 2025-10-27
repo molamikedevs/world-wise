@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useCityContext } from '../../../context/city-context'
+import { useCityContext } from '../../../context/contexts'
 import { formatDate } from '../../../utils'
 import { CityProps } from '../../../types'
 import BackButton from '../../common/back-button'

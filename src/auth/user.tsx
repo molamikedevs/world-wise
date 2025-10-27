@@ -1,15 +1,17 @@
-import { useNavigate } from 'react-router-dom'
-import { useAuthContext } from '../../../context/contexts'
+import { useAuthContext } from '../context/contexts'
 import styles from './user.module.css'
 
-function User() {
-	const { user, logout } = useAuthContext()
-	const navigate = useNavigate()
+export default function User() {
+	const { logout, user } = useAuthContext()
+
 	const { name, avatar } = user || {}
+
+	if (!user) {
+		return null
+	}
 
 	function handleClick() {
 		logout()
-		navigate('/')
 	}
 
 	return (
@@ -20,5 +22,3 @@ function User() {
 		</div>
 	)
 }
-
-export default User

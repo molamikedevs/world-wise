@@ -5,3 +5,19 @@
   display: flex;
   position: relative;
 }
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 56.25em) { /* 900px */
+  .app {
+    padding: 1.6rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 37.5em) { /* 600px */
+  .app {
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+  }
+}

@@ -32,39 +32,3 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
-/* Tablet responsiveness */
-@media (max-width: 56.25em) { /* 900px */
-  .user {
-    top: 2rem;
-    right: 2rem;
-    padding: 0.8rem 1.2rem;
-    font-size: 1.4rem;
-    gap: 1.2rem;
-  }
-  
-  .user img {
-    height: 3.5rem;
-  }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 37.5em) { /* 600px */
-  .user {
-    position: static;
-    margin: 2rem auto 0;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    gap: 1rem;
-    width: fit-content;
-  }
-  
-  .user img {
-    height: 3rem;
-  }
-  
-  .user button {
-    font-size: 1.1rem;
-    padding: 0.7rem 1rem;
-  }
-}

@@ -33,3 +33,17 @@
   color: var(--color-dark--1);
   box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
 }
+
+/* Mobile responsiveness */
+@media (max-width: 37.5em) { /* 600px */
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+  
+  .position {
+    font-size: 1.5rem;
+    bottom: 2rem;
+    padding: 1rem 2rem;
+  }
+}

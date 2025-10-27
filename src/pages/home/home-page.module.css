@@ -32,3 +32,44 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+/* Tablet responsiveness */
+@media (max-width: 56.25em) { /* 900px */
+  .homepage {
+    margin: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  
+  .homepage h1 {
+    font-size: 3.5rem;
+  }
+  
+  .homepage h2 {
+    font-size: 1.7rem;
+    width: 95%;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 37.5em) { /* 600px */
+  .homepage {
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    height: calc(100vh - 3rem);
+  }
+  
+  .homepage section {
+    gap: 2rem;
+    height: 90%;
+  }
+  
+  .homepage h1 {
+    font-size: 2.8rem;
+  }
+  
+  .homepage h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

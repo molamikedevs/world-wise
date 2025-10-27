@@ -7,7 +7,6 @@ export function formatDate(date: string | number | Date): string {
 	})
 }
 
-
 export function convertToEmoji(countryCode: string): string {
 	const code = countryCode.toUpperCase().replace(/[^A-Z]/g, '') // sanitize
 	return String.fromCodePoint(...[...code].map(c => 127397 + c.charCodeAt(0)))
@@ -16,3 +15,10 @@ export function convertToEmoji(countryCode: string): string {
 export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 export const BASE_URL =
 	'https://api.bigdatacloud.net/data/reverse-geocode-client'
+
+export const FAKE_USER = {
+	name: 'Jack',
+	email: 'jack@example.com',
+	password: 'qwerty',
+	avatar: 'https://i.pravatar.cc/100?u=zz',
+}

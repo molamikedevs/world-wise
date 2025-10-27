@@ -32,3 +32,46 @@
 .product section a {
   margin-top: 2rem;
 }
+
+/* Tablet responsiveness */
+@media (max-width: 56.25em) { /* 900px */
+  .product {
+    margin: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  
+  .product section {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    width: clamp(70rem, 90%, 80rem);
+    margin: 4rem auto;
+  }
+  
+  .product h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 37.5em) { /* 600px */
+  .product {
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .product section {
+    width: 100%;
+    margin: 2rem auto;
+    gap: 3rem;
+  }
+  
+  .product h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

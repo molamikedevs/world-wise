@@ -1,9 +1,8 @@
-import { useCityContext } from '../../../context/city-context'
+import { useCityContext } from '../../../context/contexts'
 import Spinner from '../../common/spinner'
 import Message from '../message/message'
 import CityItem from './city-item'
 import styles from './city-list.module.css'
-
 
 export default function CityList() {
 	const { cities, isLoading } = useCityContext()

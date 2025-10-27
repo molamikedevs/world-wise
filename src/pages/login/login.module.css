@@ -24,3 +24,32 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+/* Tablet responsiveness */
+@media (max-width: 56.25em) { /* 900px */
+  .login {
+    margin: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  
+  .form {
+    width: 40rem;
+    margin: 6rem auto;
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 37.5em) { /* 600px */
+  .login {
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 35rem;
+    margin: 4rem auto;
+    padding: 2rem;
+  }
+}

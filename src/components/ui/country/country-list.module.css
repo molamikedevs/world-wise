@@ -12,3 +12,19 @@
 
   overflow: auto;
 }
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 56.25em) { /* 900px */
+  .countryList {
+    height: auto;
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 37.5em) { /* 600px */
+  .countryList {
+    grid-template-columns: 1fr;
+    max-height: 35vh;
+    gap: 1.2rem;
+  }
+}

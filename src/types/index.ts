@@ -27,6 +27,18 @@ export interface CityContextType {
 	createCity: (city: CityProps) => void
 	deleteCity: (id: string) => void
 }
+export interface User {
+	name?: string
+	email: string
+	password: string
+	avatar?: string
+}
+export interface AuthContextType {
+	user: User | null
+	isAuthenticated: boolean
+	login: (email: string, password: string) => void
+	logout: () => void
+}
 
 export interface CountryItemProps {
 	country: {

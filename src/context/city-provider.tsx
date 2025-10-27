@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from 'react'
 import { API_URL } from '../utils'
-import { CityContext } from './city-context'
+import { CityContext } from './contexts'
 import { CityProps } from '../types'
 
 const INITIAL_STATE = {
