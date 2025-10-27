@@ -47,6 +47,18 @@
         "lng": 49.8671
       },
       "id": "12345678"
+    },
+    {
+      "id": "c0aa",
+      "cityName": "Castelo de Vide",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2025-10-01",
+      "notes": "Nice people in this city.",
+      "position": {
+        "lat": 39.52099229357195,
+        "lng": -7.426757812500001
+      }
     }
   ]
 }

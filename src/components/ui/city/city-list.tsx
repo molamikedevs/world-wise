@@ -6,8 +6,8 @@ import styles from './city-list.module.css'
 
 
 export default function CityList() {
-	const { cities, loading } = useCityContext()
-	if (loading) {
+	const { cities, isLoading } = useCityContext()
+	if (isLoading) {
 		return <Spinner />
 	}
 

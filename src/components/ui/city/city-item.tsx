@@ -15,12 +15,14 @@ export default function CityItem({
 }: {
 	city: CityProps
 }) {
-	const { selectedCity, deleteCity } = useCityContext()
+	const { city, deleteCity } = useCityContext()
 
-	function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+	async function handleDelete(
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) {
 		e.preventDefault()
 		e.stopPropagation()
-		deleteCity(id)
+		await deleteCity(id)
 	}
 
 	return (
@@ -28,12 +30,14 @@ export default function CityItem({
 			<Link
 				to={`${id}?lat=${lat}&lng=${lng}`}
 				className={`${styles.cityItem} ${
-					id === selectedCity?.id ? styles['cityItem--active'] : ''
+					id === city?.id ? styles['cityItem--active'] : ''
 				}`}>
 				<span className={styles.emoji}>{emoji}</span>
 				<h3 className={styles.name}>{cityName}</h3>
 				<time className={styles.date}>({formatDate(date)})</time>
-				<button onClick={handleDelete} className={styles.deleteBtn}>&times;</button>
+				<button onClick={handleDelete} className={styles.deleteBtn}>
+					&times;
+				</button>
 			</Link>
 		</li>
 	)

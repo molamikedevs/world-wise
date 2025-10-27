@@ -6,8 +6,8 @@ import CountryItem from './country-item'
 import styles from './country-list.module.css'
 
 export default function CountryList() {
-	const { cities, loading } = useCityContext()
-	if (loading) {
+	const { cities, isLoading } = useCityContext()
+	if (isLoading) {
 		return <Spinner />
 	}
 

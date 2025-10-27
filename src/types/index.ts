@@ -20,10 +20,9 @@ export interface CountriesListProps {
 
 export interface CityContextType {
 	cities: CityProps[] | undefined
-	loading: boolean // for cities list
-	selectedCityLoading: boolean // for individual city
+	city: CityProps | null
+	isLoading: boolean
 	error: string | null
-	selectedCity: CityProps | null
 	getCityById: (id: string) => void
 	createCity: (city: CityProps) => void
 	deleteCity: (id: string) => void

@@ -10,7 +10,7 @@ import Error from '../../common/error'
 
 export default function City() {
 	const { id } = useParams()
-	const { getCityById, selectedCity, loading, error } = useCityContext()
+	const { getCityById, city, isLoading, error } = useCityContext()
 
 	// Fetch city data when id changes
 	useEffect(() => {
@@ -18,11 +18,11 @@ export default function City() {
 	}, [id]) // eslint-disable-line react-hooks/exhaustive-deps
 
 	// Handle loading, error, and no city found states
-	if (loading) {
+	if (isLoading) {
 		return <Spinner />
 	}
 
-	if (!selectedCity) {
+	if (!city) {
 		return <div className="error">City not found</div>
 	}
 
@@ -30,7 +30,7 @@ export default function City() {
 		return <Error message="Failed to fetch city data" />
 	}
 
-	const { cityName, date, emoji, notes } = selectedCity as CityProps
+	const { cityName, date, emoji, notes } = city as CityProps
 
 	return (
 		<div className={styles.city}>

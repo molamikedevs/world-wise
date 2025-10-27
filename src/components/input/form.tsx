@@ -25,7 +25,7 @@ export default function Form() {
 	const [geoLoading, setGeoLoading] = useState<boolean>(false)
 
 	const { mapLat, mapLng } = useUrlPosition()
-	const { createCity, loading } = useCityContext()
+	const { createCity, isLoading } = useCityContext()
 	const navigate = useNavigate()
 
 	console.log(country)
@@ -94,7 +94,7 @@ export default function Form() {
 
 	return (
 		<form
-			className={`${styles.form} ${loading ? styles.loading : ''}`}
+			className={`${styles.form} ${isLoading ? styles.loading : ''}`}
 			onSubmit={handleSubmit}>
 			<div className={styles.row}>
 				<label htmlFor="cityName">City name</label>
