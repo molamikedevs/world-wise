@@ -11,7 +11,7 @@ export default function BackButton() {
 				e.preventDefault()
 				navigate(-1)
 			}}>
-			&larr; Back
+			Back
 		</Button>
 	)
 }

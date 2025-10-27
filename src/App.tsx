@@ -1,38 +1,17 @@
-import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { HomePage, Pricing, Product, PageNotFound, AppLayout } from './pages'
-import './index.css'
+
 import Login from './pages/login/login'
-import CityList from './components/ui/city/city-list/city-list'
+import CityList from './components/ui/city/city-list'
 import CountryList from './components/ui/country/country-list'
 import City from './components/ui/city/city'
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+import Form from './components/input/form'
+import './index.css'
 
 export default function App() {
-	const [cities, setCities] = useState([])
-	const [loading, setLoading] = useState(false)
-
-	useEffect(() => {
-		const fetchCities = async () => {
-			try {
-				setLoading(true)
-				const response = await fetch(`${API_URL}/cities`)
-				const data = await response.json()
-				setCities(data)
-			} catch (error) {
-				console.error('Error fetching cities:', error)
-			} finally {
-				setLoading(false)
-			}
-		}
-
-		fetchCities()
-	}, [])
-
 	return (
 		<Routes>
+			{/* Navigation Routes */}
 			<Route index element={<HomePage />} />
 			<Route path="/product" element={<Product />} />
 			<Route path="/pricing" element={<Pricing />} />
@@ -40,21 +19,14 @@ export default function App() {
 
 			{/* App Layout */}
 			<Route path="/app" element={<AppLayout />}>
-				<Route
-					index
-					element={<CityList cities={cities} isLoading={loading} />}
-				/>
-        <Route path="cities/:cityId" element={<City />} />
-				<Route
-					path="cities"
-					element={<CityList cities={cities} isLoading={loading} />}
-				/>
-				<Route
-					path="countries"
-					element={<CountryList cities={cities} isLoading={loading} />}
-				/>
-				<Route path="form" element={<p>Form</p>} />
+				<Route index element={<Navigate replace to="cities" />} />
+				<Route path="cities/:id" element={<City />} />
+				<Route path="cities" element={<CityList />} />
+				<Route path="countries" element={<CountryList />} />
+				<Route path="form" element={<Form />} />
 			</Route>
+
+			{/* 404 Page Not Found */}
 			<Route path="*" element={<PageNotFound />} />
 		</Routes>
 	)
