@@ -49,18 +49,6 @@
       "id": "12345678"
     },
     {
-      "id": "c0aa",
-      "cityName": "Castelo de Vide",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2025-10-01",
-      "notes": "Nice people in this city.",
-      "position": {
-        "lat": 39.52099229357195,
-        "lng": -7.426757812500001
-      }
-    },
-    {
       "id": "f8bb",
       "cityName": "Felahiye",
       "country": "Turkiye",
@@ -73,15 +61,15 @@
       }
     },
     {
-      "id": "f070",
-      "cityName": "Borrowdale",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2025-10-31",
-      "notes": "Lovely place to visit.",
+      "id": "9efb",
+      "cityName": "Khirdalan",
+      "country": "Azerbaijan",
+      "emoji": "🇦🇿",
+      "date": "2025-10-16",
+      "notes": "I live here.",
       "position": {
-        "lat": 54.584796743678744,
-        "lng": -3.1201171875
+        "lat": 40.07807142745009,
+        "lng": 49.24072265625001
       }
     }
   ]

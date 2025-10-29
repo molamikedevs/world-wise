@@ -1,4 +1,4 @@
-import { useCityContext } from '../../../context/contexts'
+import { useCityContext } from '../../../context/city-context'
 import Spinner from '../../common/spinner'
 import Message from '../message/message'
 import CityItem from './city-item'

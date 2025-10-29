@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { formatDate } from '../../../utils'
 import { CityProps } from '../../../types'
 import styles from './cityItem.module.css'
-import { useCityContext } from '../../../context/contexts'
+import { useCityContext } from '../../../context/city-context'
 
 export default function CityItem({
 	city: {

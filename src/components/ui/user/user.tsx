@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useAuthContext } from '../../../context/contexts'
+import { useAuthContext } from '../../../context/city-context'
 import styles from './user.module.css'
 
 function User() {

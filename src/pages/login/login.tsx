@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from './login.module.css'
 import PageNavigation from '../../components/navigation/page-navigation/page-navigation'
-import { useAuthContext } from '../../context/contexts'
+import { useAuthContext } from '../../context/city-context'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/common/button'
 

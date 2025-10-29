@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import type { LatLngTuple } from 'leaflet'
 
-import { useCityContext } from '../../../context/contexts'
+import { useCityContext } from '../../../context/city-context'
 import { useGeolocation } from '../../../hooks/useGeolocation'
 import { useUrlPosition } from '../../../hooks/useUrlPosition'
 

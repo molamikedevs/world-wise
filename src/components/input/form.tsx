@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { useCityContext } from '../../context/contexts'
 import { CityProps } from '../../types'
 import { useUrlPosition } from '../../hooks/useUrlPosition'
 import { BASE_URL, convertToEmoji } from '../../utils'
@@ -14,6 +13,7 @@ import Spinner from '../common/spinner'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import styles from './form.module.css'
+import { useCityContext } from '../../context/city-context'
 
 export default function Form() {
 	const [cityName, setCityName] = useState<string>('')

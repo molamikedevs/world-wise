@@ -1,45 +1,16 @@
 import React from 'react'
-import { AuthContext } from './contexts'
 import { FAKE_USER } from '../utils'
-import { User } from '../types'
-
-
-
-interface State {
-	user: User | null
-	isAuthenticated: boolean
-}
-
-type Action = { type: 'LOGIN'; payload: User } | { type: 'LOGOUT' }
-
-const INITIAL_STATE: State = {
-	user: null,
-	isAuthenticated: false,
-}
-
-const reducer = (state: State, action: Action): State => {
-	switch (action.type) {
-		case 'LOGIN':
-			return { ...state, user: action.payload, isAuthenticated: true }
-		case 'LOGOUT':
-			return { ...state, user: null, isAuthenticated: false }
-		default:
-			throw new Error('Unknown action type')
-	}
-}
+import { useAuthReducer } from '../hooks/useAuthReducer'
+import { AuthContext } from './city-context'
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-	const [{ user, isAuthenticated }, dispatch] = React.useReducer(
-		reducer,
-		INITIAL_STATE
-	)
+	const { dispatch: dispatch, user, isAuthenticated } = useAuthReducer()
 
 	function login(email: string, password: string) {
-	if (email === FAKE_USER.email && password === FAKE_USER.password) {
-		dispatch({ type: 'LOGIN', payload: FAKE_USER })
+		if (email === FAKE_USER.email && password === FAKE_USER.password) {
+			dispatch({ type: 'LOGIN', payload: FAKE_USER })
+		}
 	}
-}
-
 
 	function logout() {
 		dispatch({ type: 'LOGOUT' })

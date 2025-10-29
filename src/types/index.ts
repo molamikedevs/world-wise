@@ -64,3 +64,37 @@ export interface GeolocationResult {
 	location: LatLngTuple | null
 	error: string | null
 }
+
+export const City_INITIAL_STATE = {
+	cities: [] as CityProps[],
+	city: null as CityProps | null,
+	isLoading: false,
+	error: '',
+}
+
+export type CityAction =
+	| { type: 'CITIES/LOADED'; payload: CityProps[] }
+	| { type: 'CITY/LOADED'; payload: CityProps | null }
+	| { type: 'REJECTED'; payload: string | '' }
+	| { type: 'LOADING' }
+	| { type: 'CITY/CREATED'; payload: CityProps }
+	| { type: 'CITY/DELETED'; payload: string }
+
+export interface CityState {
+	cities: CityProps[]
+	city: CityProps | null
+	isLoading: boolean
+	error: string | ''
+}
+
+export interface AuthState {
+	user: User | null
+	isAuthenticated: boolean
+}
+
+export type AuthAction = { type: 'LOGIN'; payload: User } | { type: 'LOGOUT' }
+
+export const AUTH_INITIAL_STATE = {
+	user: null,
+	isAuthenticated: false,
+}
