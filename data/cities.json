@@ -59,6 +59,30 @@
         "lat": 39.52099229357195,
         "lng": -7.426757812500001
       }
+    },
+    {
+      "id": "f8bb",
+      "cityName": "Felahiye",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2025-10-21",
+      "notes": "Beautiful city",
+      "position": {
+        "lat": 39.16414104768742,
+        "lng": 35.50781250000001
+      }
+    },
+    {
+      "id": "f070",
+      "cityName": "Borrowdale",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2025-10-31",
+      "notes": "Lovely place to visit.",
+      "position": {
+        "lat": 54.584796743678744,
+        "lng": -3.1201171875
+      }
     }
   ]
 }

@@ -100,3 +100,34 @@ input:focus {
   font-weight: 600;
   margin: 1rem 0;
 }
+
+.not-found {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #999;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 10rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.not-found p {
+  font-size: 1.6rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.not-found-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--color-brand--2);
+  color: var(--color-dark--0);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
